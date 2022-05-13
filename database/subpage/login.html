@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Title</title>
     <style>
         body{
@@ -9,32 +10,52 @@
             margin-top: 10%;
             background-color: #02023a;
         }
+        @media only screen and (max-width: 768px) {
+            body{
+                margin-left: 10%;
+            }
+            .login{
+                left:44%;
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            body{
+                margin-left: 7%;
+            }
+            
+         }
+         @media only screen and (max-width: 320px) {
+            body{
+                margin-left: 4%;
+            }
+         }
     </style>
 </head>
 <body>
         <div style="width:500px;" >
+            <div style="height:35px;width:400px;position:relative;display:inline;left:11%;" ><!--相關位置--> <!--此處為相關位置與絕對位置聯合使用-->
          <label for="username" style="font-size:18px;color:white" >使用者名稱：</label>
-         <div style="height:35px;width:400px;position:absolute;display:inline;left:44%;" >   <!--相關位置--> <!--此處為相關位置與絕對位置聯合使用-->
-<input id="username" type="text" style="height:30px;width:350px;padding-right:50px;">
-             <span style="position:absolute;right:18px;top:2px;background-image:url(user.ico);height:16px;width:16px;display:inline-block;"></span>  <!--絕對位置-->
-</div>
+            <input id="username" type="text" style="height:30px;width:350px;">
+            <span style="position:absolute;right:18px;top:2px;background-image:url(user.ico);height:16px;width:16px;display:inline-block;"></span>  絕對位置
+        </div>
          <br/>
          <br/>
-         <label for="password1" style="font-size:18px; color: white;" >&nbsp密碼：　　</label>
-         <div style="height:35px;width:400px;position:absolute;display:inline;left:44%;" >   <!--相關位置--> <!--此處為相關位置與絕對位置聯合使用-->
-<input id="password1" type="password" style="height:30px;width:350px;padding-right:50px;">
-             <span style="position:absolute;right:16px;top:2px;background-image:url(p.ico);height:16px;width:16px;display:inline-block;"></span>  <!--絕對位置-->
-</div>
+         <div style="height:35px;width:400px;position:relative;display:inline;left:10%;" >   <!--相關位置--> <!--此處為相關位置與絕對位置聯合使用-->
+         <label for="password1" style="font-size:18px; color: white;" >&nbsp密碼：　　　</label>
+         
+            <input id="password1" type="password" style="height:30px;width:350px;">
+            <span style="position:absolute;right:16px;top:2px;background-image:url(p.ico);height:16px;width:16px;display:inline-block;"></span>  <!--絕對位置-->
+        </div>
          <br/>
          <br/>
          <div style="width:426px;float: right;">
             
 <a herf="找回密碼網址"style="color:white;">忘記密碼？</a>
-             <a onClick="window.open('/subpage/registe.html'),'','height=500,width=611,scrollbars=yes,status =yes,'" style="color: white; cursor:pointer;">註冊</a>
+             <a onClick="window.open('../subpage/registe.html'),'','height=500,width=611,scrollbars=yes,status =yes,'" style="color: white; cursor:pointer;">註冊</a>
             </div>
          <br/>
          <br/>
-         <div style="width:426px;position:absolute;left:44%;" onClick="window.open('../main.html')">
+         <div style="width:426px;position:absolute;left:44%;" class="login" onClick="window.open('../main.html')">
              <input type="submit" value="登入"  style="height:30px;width:400px;background-color:red;"/>
          </div>
          <script language="javascript">
