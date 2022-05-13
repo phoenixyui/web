@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>註冊</title>
+    <style>
+        body{
+            margin-left:35%;
+            margin-top: 5%;
+            background-color: #02023a;
+        }
+        p{
+            font-size: 18px;
+            color: white;
+        }
+.p{
+            color:red;
+margin-left:20px;
+display:inline-block;
+}
+        .c{
+            color:red;
+margin-left:4px;
+display:inline-block;
+}
+        .l{
+            font-size:18px;
+            color: white;
+}
+        .d{
+            height:35px;
+            width:300px;
+display:inline;
+position: relative;
+left:15%;
+}
+        .i{
+            height:30px;
+width:300px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <span style="width: 90px;height:90px;border:3px;background-color: white;"><a href="../main.html" >首頁</a></span>
+    
+    <div style="height:80px;"></div>
+    <form enctype="multipart/form-data">
+        <div style="width:500px;float:left;margin:0 20px;">
+            <div style="font-size:28px; color: white;" class="a">註冊新使用者</div>
+            <br><br>
+            <label for="username" class="l">使用者名稱:</label>
+            <div style="height:35px;width:300px;position:relative;display:inline;left:11.8%">
+                <input id="username" type="text" style="height:30px;width:250px;padding-right:50px;">
+                <span style="position:absolute;right:18px;top:2px;background-image:url(user.ico);height:16px;width:16px;display:inline-block;" ></span>
+            </div>
+            <br><br>
+            <label for="phonenumber" class="l">電子郵件:</label>
+            <div  class="d">
+                <input id="phonenumber" type="text" class="i">
+            </div>
+            <br><br>
+            <label for="login_password" class="l">登入密碼:</label>
+            <div  class="d">
+                <input id="login_password" type="password" class="i">
+            </div>
+            <br><br>
+            <label for="confirm_password" class="l">確認密碼:</label>
+            <div  class="d">
+                <input id="confirm_password" type="password" class="i">
+                <script language="javascript">
+                    function check(){
+                        var a=document.getElementById("login_password").value;
+                        var b=document.getElementById("confirm_password").value;
+                        if(a!=b){
+                          alert("登入密碼與確認密碼不相符");
+                        }
+                        else{
+                            window.close();
+                        }
+                    }
+                </script>
+            </div>
+            <br><br>
+            <input type="checkbox" name="agree" style="margin-left:100px;display:inline-block;" value="1"/>
+            <span style="font-size:18px;" class="l">我已閱讀並同意《使用者註冊協議》</span>
+            <br/><br/>
+            <input type="submit" value="同意以上協議並註冊" onclick="check()" style="margin-left:100px;height:30px;width:300px;background-color:red;display:inline-block;"/>
+        </div>
+    </form>
+</body>
+</html>
