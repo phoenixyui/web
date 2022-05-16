@@ -90,12 +90,18 @@ width:300px;
                     function check(){
                         var a=document.getElementById("login_password").value;
                         var b=document.getElementById("confirm_password").value;
-                        if(a!=b){
-                          alert("登入密碼與確認密碼不相符");
+                        var check = document.getElementsByName('agree')[0];
+                        if(check.checked!=true){
+                            alert("請閱讀使用者協議");
+                        }else{
+                            if(a!=b){
+                                alert("登入密碼與確認密碼不相符");
+                             }
+                            else{
+                                window.close();
+                            }
                         }
-                        else{
-                            window.close();
-                        }
+                        
                     }
                 </script>
             </div>
