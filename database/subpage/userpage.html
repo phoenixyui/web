@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="userpage.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+
+<body>
+    <div class="profile-card">
+        <span ><a href="../main-login.html" >首頁</a></span>
+        <div class="card-header">
+            
+            <div class="pic">
+                <form name="form0" id="form0" >
+                    <img src="" id="img0" >
+                    <a href="#" id="fileSelect" style="color: white;">Select some files</a>
+                    <input type="file" name="file0" id="file0" multiple="multiple"style="display:none" />
+                    
+                </form>
+                <!-- <img src="" id="selected"> -->
+                <script>    
+                    /**
+                     * 使用HTML5 File API, 來即時預覽image
+                     */
+                    $("#file0").change(function(){
+                        var objUrl = getObjectURL(this.files[0]) ;
+                        console.log("objUrl = "+objUrl) ;
+                        if (objUrl) {
+                            $("#img0").attr("src", objUrl) ;
+                        }
+                    }) ;
+                    
+                    /**
+                     * 建立一個可存取到該file的url
+                     * PS: 瀏覽器必須支援HTML5 File API
+                     */
+                    function getObjectURL(file) {
+                        var url = null ; 
+                        if (window.createObjectURL!=undefined) { // basic
+                            url = window.createObjectURL(file) ;
+                        } else if (window.URL!=undefined) { // mozilla(firefox)
+                            url = window.URL.createObjectURL(file) ;
+                        } else if (window.webkitURL!=undefined) { // webkit or chrome
+                            url = window.webkitURL.createObjectURL(file) ;
+                        }
+                        return url ;
+                        console.log( url )
+                    }
+                    var fileSelect = document.getElementById("fileSelect"),
+                        fileElem = document.getElementById("file0");
+
+                        fileSelect.addEventListener("click", function (e) {
+                        if (fileElem) {
+                            fileElem.click();
+                        }
+                        e.preventDefault(); // prevent navigation to "#"
+                        }, false);
+                    </script>
+                
+            </div>
+            <div class="name"></div>    <!--查詢資料庫-->
+            <div class="sm">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-github"></a>
+                <a href="#" class="fab fa-youtube"></a>
+
+            </div>
+            <a href="#" class="contract-btn">Contact Me</a>
+        </div>
+        <div class="card-footer">
+            <div class="numbers">
+                <div class="item">
+                    <span>0</span>
+                    posts
+                </div>
+                <div class="border"></div>
+                <div class="item">
+                    <span>0</span>
+                    Following
+                </div>
+                <div class="border"></div>
+                <div class="item">
+                    <span>0</span>
+                    Followers
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
