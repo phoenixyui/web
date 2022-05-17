@@ -81,6 +81,21 @@
         color: white;
         text-align: center;
     }
+    .collectitem{
+        border: 5px 
+        black solid; 
+        width:80%; 
+        height: 80px; 
+        margin-left:10%;
+        background-color: rgb(29, 165, 228);
+        text-align: center;
+        line-height: 25px;
+    }
+    .collection{
+        color: black;
+        font-size: 28px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
 </style>
 </head>
 <body>
@@ -90,7 +105,7 @@
         </span>
 
         <span class="store">
-        <a href="../main-login.html"><p class="storetext">商店</p></a>
+        <a href="./search.html"><p class="storetext">商店</p></a>
         </span>
 
         <span class="collect">
@@ -114,14 +129,23 @@
               <li><a class="dropdown-item" href="./userpage.html"><p class="btn">個人主頁</p></a></li>
               <li><a class="dropdown-item" href="#"><p class="btn">錢包</p></a></li>
               <li><a class="dropdown-item" href="#"><p class="btn">購物車</p></a></li>
-              <li><a class="dropdown-item" href="main.html"><p class="btn">登出</p></a></li>
+              <li><a class="dropdown-item" href="../index.php"><p class="btn">登出</p></a></li>
             </ul></a>
           </span>
     </div>
-    <div style="border: 5px black solid; width:80%; height: auto; margin-top: 15%; margin-left:10%;background-color: rgb(29, 165, 228);">
-        <div style="height: 80px;"> 
-            <a href=""></a>
-        </div>
+    
+    <div style="margin-top: 10%;">
+        <h3 style="color: white; font-size: 35px; text-align: center;">收藏庫</h3>
+            <!-- 
+                看查詢出來有多少就顯示幾次
+            <div class="collectitem"> 
+                <p class="collection">##商品名稱##</p>
+            </div>
+            -->
+            <div class="collectitem"> 
+                <p class="collection">##商品名稱##</p>
+            </div>
     </div>
+    
 </body>
 </html>
