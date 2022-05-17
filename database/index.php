@@ -127,7 +127,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
 <body>
     <div class="topblock">
         <span class="mainpage">
-            <a href="./main.html"><img class="testimg"
+            <a href="./index.php"><img class="testimg"
                     src="https://s.yimg.com/os/creatr-uploaded-images/2021-12/8e8910a0-6610-11ec-afff-db582318fed5"></a>
         </span>
 
