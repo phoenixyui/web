@@ -90,12 +90,12 @@
             <br><br>
             <label for="password" class="l">登入密碼:</label>
             <div class="d">
-                <input name="pwd1" type="password" class="i">
+                <input name="password" type="password" class="i">
             </div>
             <br><br>
             <label for="confirm_password" class="l">確認密碼:</label>
             <div class="d">
-                <input name="pwd2" type="password" class="i">
+                <input name="confirm_password" type="password" class="i">
                 <script language="javascript">
                     
                     function check(){
@@ -105,7 +105,7 @@
                             alert("請閱讀使用者協議");
                         } 
                         else{
-                            if (document.getElementsByName("pwd1")[0].value != document.getElementsByName("pwd2")[0].value) {
+                            if (document.getElementsByName("password")[0].value != document.getElementsByName("confirm_password")[0].value) {
                                 alert("登入密碼與確認密碼不相符");
 
                             } else {
