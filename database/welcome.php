@@ -1,18 +1,16 @@
-/* 未登入首頁
+/* 登入後
 <!DOCTYPE html>
 <html>
-
 <?php
-// Initialize the session
 session_start();
-
-// Check if the user is already logged in, if yes then redirect him to welcome page
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("location: welcome.php");
-    exit;  //記得要跳出來，不然會重複轉址過多次
+/*
+if($_SESSION[loggedin] != TRUE) {
+    header('Location:login.html');
 }
+*/
+$username=$_SESSION["username"];
+ 
 ?>
-
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -128,47 +126,64 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 <body>
     <div class="topblock">
         <span class="mainpage">
-            <a href="./index.php"><img class="testimg" src="https://s.yimg.com/os/creatr-uploaded-images/2021-12/8e8910a0-6610-11ec-afff-db582318fed5"></a>
+            <a href="./main-login.html"><img class="testimg"
+                    src="https://s.yimg.com/os/creatr-uploaded-images/2021-12/8e8910a0-6610-11ec-afff-db582318fed5"></a>
         </span>
 
-        <!-- <span class="store">
-        <a href="./main.html"><p class="storetext">商店</p></a>
+        <span class="store">
+            <a href="./subpage/search.html">
+                <p class="storetext">商店</p>
+            </a>
         </span>
 
         <span class="collect">
-            <a href="./main.html"><p class="collecttext">收藏庫</p></a>
-        </span> -->
-        <a onClick="window.location.replace('subpage/login.html'),'','height=500,width=611,scrollbars=yes,status =yes'">
-            <span class="login" style="width: 90px; height:90px;position: absolute; right: 10%; border: 5px black solid ; border-radius: 100%;top:10px;">
-                <img src="subpage/1596664909489.jpg" alt="未登入" style="width: 90px;height: 90px; border-radius:100%;">
-            </span>
-        </a>
+            <a href="./subpage/collect.html">
+                <p class="collecttext">收藏庫</p>
+            </a>
+        </span>
+        <!-- <a  onClick="window.location.replace('subpage/login.html'),'','height=500,width=611,scrollbars=yes,status =yes'">
+        <span class="login" style="width: 90px; height:90px;position: absolute; right: 20%; border: 5px black solid ; border-radius: 100%;top:10px;">
+            <img src="subpage/1596664909489.jpg" alt="未登入" style="width: 90px;height: 90px; border-radius:100%;">
+        </span>  
+        </a> -->
         <!-- <script language="javascript">
             function click(){
                 onclick="window.open('/subpage/registe.html')"
             }
         </script> -->
 
-        <!-- <span class="dropdown">
+        <span class="dropdown">
             <p class="btn">設定</p>
             <a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="#"><p class="btn">個人主頁</p></a></li>
-                <li><a class="dropdown-item" href="#"><p class="btn">錢包</p></a></li>
-                <li><a class="dropdown-item" href="#"><p class="btn">購物車</p></a></li>
-                <li><a class="dropdown-item" href="#"><p class="btn">登出</p></a></li>
-            </ul></a>
-        </span> -->
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="subpage/userpage.html">
+                            <p class="btn">個人主頁</p>
+                        </a></li>
+                    <li><a class="dropdown-item" href="#">
+                            <p class="btn">錢包</p>
+                        </a></li>
+                    <li><a class="dropdown-item" href="#">
+                            <p class="btn">購物車</p>
+                        </a></li>
+                    <li><a class="dropdown-item" href="./php/logout.php">
+                            <p class="btn">登出</p>
+                        </a></li>
+                </ul>
+            </a>
+        </span>
     </div>
     <div class="swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide" id="slide"><img src="https://s.yimg.com/os/creatr-uploaded-images/2021-12/8e8910a0-6610-11ec-afff-db582318fed5">
+            <div class="swiper-slide" id="slide"><img
+                    src="https://s.yimg.com/os/creatr-uploaded-images/2021-12/8e8910a0-6610-11ec-afff-db582318fed5">
             </div>
-            <div class="swiper-slide" id="slide"><img src="https://s.yimg.com/os/creatr-uploaded-images/2021-12/8e8910a0-6610-11ec-afff-db582318fed5">
+            <div class="swiper-slide" id="slide"><img
+                    src="https://s.yimg.com/os/creatr-uploaded-images/2021-12/8e8910a0-6610-11ec-afff-db582318fed5">
             </div>
-            <div class="swiper-slide" id="slide"><img src="https://s.yimg.com/os/creatr-uploaded-images/2021-12/8e8910a0-6610-11ec-afff-db582318fed5">
+            <div class="swiper-slide" id="slide"><img
+                    src="https://s.yimg.com/os/creatr-uploaded-images/2021-12/8e8910a0-6610-11ec-afff-db582318fed5">
             </div>
         </div>
         <div class="swiper-pagination"></div>
