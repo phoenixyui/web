@@ -162,7 +162,7 @@ $username=$_SESSION["username"];
                     <li><a class="dropdown-item" href="#">
                             <p class="btn">錢包</p>
                         </a></li>
-                    <li><a class="dropdown-item" href="#">
+                    <li><a class="dropdown-item" href="./subpage/shoppingcar.html">
                             <p class="btn">購物車</p>
                         </a></li>
                     <li><a class="dropdown-item" href="./php/logout.php">
