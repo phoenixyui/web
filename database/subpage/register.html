@@ -72,7 +72,7 @@
 
     <div style="height:80px;"></div>
     <form enctype="multipart/form-data" name="registerForm" method="post" action="./php/register.php"
-       onsubmit="return check();" >
+        onsubmit="return check();">
         <div style="width:500px;float:left;margin:0 20px;">
             <div style="font-size:28px; color: white;" class="a">註冊新使用者</div>
             <br><br>
@@ -97,15 +97,14 @@
             <div class="d">
                 <input name="confirm_password" type="password" class="i">
                 <script language="javascript">
-                    
-                    function check(){
+                    function check() {
                         // alert(document.getElementsByName("agree")[0].checked);
-                        var test=false;
+                        var test = false;
                         if (document.getElementsByName("agree")[0].checked != true) {
                             alert("請閱讀使用者協議");
-                        } 
-                        else{
-                            if (document.getElementsByName("password")[0].value != document.getElementsByName("confirm_password")[0].value) {
+                        } else {
+                            if (document.getElementsByName("password")[0].value != document.getElementsByName(
+                                    "confirm_password")[0].value) {
                                 alert("登入密碼與確認密碼不相符");
 
                             } else {
@@ -114,9 +113,9 @@
 
                             }
                         }
-                        
-                            return test;
-                        
+
+                        return test;
+
                     }
                 </script>
             </div>
@@ -124,7 +123,7 @@
             <input type="checkbox" name="agree" style="margin-left:100px;display:inline-block;" value="1" />
             <span style="font-size:18px;" class="l">我已閱讀並同意《使用者註冊協議》</span>
             <br /><br />
-            <input type="submit" value="同意以上協議並註冊" 
+            <input type="submit" value="同意以上協議並註冊"
                 style="margin-left:100px;height:30px;width:300px;background-color:red;display:inline-block;" />
         </div>
     </form>

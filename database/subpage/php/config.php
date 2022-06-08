@@ -9,7 +9,7 @@ server with default setting (user 'root' with no password) */
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', 'testtest');
-define('DB_NAME', 'test shit');
+define('DB_NAME', 'sqlproject');
 define('DB_PORT', '3306');
 /* Attempt to connect to MySQL database */
 $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
@@ -21,7 +21,7 @@ if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 else{
-    echo "<script>alert(\"Connection success!\")</script>";
+    echo "<script>alert(\"Connection success!\")</script>"; //檢驗連線成功
     return $link;
     //echo "Connection success!";
     /*
